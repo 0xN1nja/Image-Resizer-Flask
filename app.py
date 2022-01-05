@@ -14,7 +14,7 @@ def success():
     file=request.files["file"]
     height=int(request.form["height"])
     width=int(request.form["width"])
-    if height>0 and width>0:
+    if 4999>height>0 and 4999>width>0:
         filename=file.filename
         file.save(filename)
         try:
