@@ -23,9 +23,9 @@ def success():
             cv2.imwrite(filename,img)
         except:
             return render_template("error.html")
-        return render_template("success.html")
     else:
         return render_template("value_error.html")
+    return render_template("success.html")
 @app.route("/download",methods=["POST"])
 def download():
     return send_file(filename,as_attachment=True)
